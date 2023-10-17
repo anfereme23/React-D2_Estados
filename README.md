@@ -1,8 +1,12 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desafio 2 - Estados de los componentes y eventos
 
-Currently, two official plugins are available:
+**Realize Fork y Pull Request a los compañeros:**
+https://github.com/vvilche/estados
+https://github.com/maglys82/ReactIII
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Recibi PR de los compañeros:**
+
+
+
