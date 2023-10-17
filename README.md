@@ -6,7 +6,6 @@ Desafio 2 - Estados de los componentes y eventos
 
 https://github.com/vvilche/estados
 
-https://github.com/maglys82/ReactIII
 
 **Recibi PR de los compañeros:**
 
