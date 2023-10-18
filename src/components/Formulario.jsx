@@ -11,17 +11,18 @@ const Formulario = () => {
     const [contraseña, setContraseña] = useState('')
     const [confirmContras, setConfirmContras] = useState('')
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-
-    const toggleMostrarContraseña = () => {
-        setMostrarContraseña(!mostrarContraseña)
-    }
-
+    const [mostrarContra, setMostrarContra] = useState(false)
     const [alertMsg, setAlertMsg] = useState('')
     const [alertType, setAlertType] = useState('')
     const alerta = (msg, type) => {
         setAlertMsg(msg)
         setAlertType(type)
     }
+
+    const toggleMostrarContra = () => {
+        setMostrarContra(!mostrarContra);
+    }
+
     //validacion de datos
     const validarDatos = (e) => {
         e.preventDefault()
@@ -55,19 +56,20 @@ const Formulario = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control 
-                type="password" 
-                placeholder="Contraseña" 
+                type={mostrarContra ? "text" : "password"} placeholder="Contraseña" 
                 onChange={(e) => setContraseña(e.target.value)} 
                 value={contraseña} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicConfirm">
-                <Form.Control type="password" placeholder="Confirma tu contraseña" onChange={(e) => setConfirmContras(e.target.value)} value={confirmContras}/>
+                <Form.Control 
+                type={mostrarContra ? "text" : "password"} placeholder="Confirma tu contraseña" 
+                onChange={(e) => setConfirmContras(e.target.value)} value={confirmContras}/>
             </Form.Group>
             <Button variant="success" type="submit" className="btnRegistro">
                 Registrarse
             </Button>
-            <Button variant="secondary" onClick={toggleMostrarContraseña}>  
-            Mostrar/ocultar contraseña
+            <Button variant="secondary" onClick={toggleMostrarContra}>  
+            {mostrarContra ? "Ocultar contraseñas" : "Mostrar contraseñas"}
             </Button>
         </Form>
         <Alerts msg={alertMsg} type={alertType}/>
