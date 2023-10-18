@@ -6,6 +6,8 @@ Desafio 2 - Estados de los componentes y eventos
 
 https://github.com/vvilche/estados
 
+https://github.com/PabloArayaG
+
 
 **Recibi PR de los compañeros:**
 
